@@ -1,3 +1,3 @@
-run:
+start:
 	poetry run python manage.py runserver
-.PHONY:  run
+.PHONY:  start
