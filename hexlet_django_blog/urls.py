@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', views.about),
     path('articles/', include('hexlet_django_blog.article.urls')),
+    path('categories/', include('hexlet_django_blog.categories.urls')),
 ]

@@ -1,0 +1,11 @@
+{% block content %}
+  <div class="container mt-4">
+  <h1>Список категорий статей</h1>
+    {% for category in categories %}
+    <!-- BEGIN (write your solution here) -->
+      <a class="link" href="{% url 'category' category.id %}">{{ category.name }}</a>
+    <!-- END -->
+      <div>{{ category.description }}</div>
+    {% endfor %}
+  </div>
+{% endblock content %}

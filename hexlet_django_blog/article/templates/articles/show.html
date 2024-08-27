@@ -1,0 +1,7 @@
+{% block content %}
+    <h1>{{ article.name }}</h1>
+    <div>{{ article.body }}</div>
+    <!-- BEGIN (write your solution here) -->
+    <a href="{% url 'category' article.category.id %}">{{ article.category.name }}</a>
+    <!-- END -->
+{% endblock %}

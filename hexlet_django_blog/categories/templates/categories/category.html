@@ -1,0 +1,18 @@
+{% block content %}
+<div class="container mt-4">
+  <!-- BEGIN (write your solution here) -->
+  <h3>{{ category.name }}</h3>
+  <p>{{ category.description }}</p>
+  
+  {% if category.article_set.all %}
+  <ol>
+  {% for article in category.article_set.all %}
+    <li><a href="{% url 'article' article.id %}">{{ article.name }}</a></li>
+  {% endfor %}
+  </ol>
+  {% endif %}
+
+  <!-- END -->
+</div>
+{% endblock content %}
+
