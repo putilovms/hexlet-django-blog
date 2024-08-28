@@ -4,4 +4,8 @@
     <!-- BEGIN (write your solution here) -->
     <a href="{% url 'category' article.category.id %}">{{ article.category.name }}</a>
     <!-- END -->
+    <form action="{% url 'articles_delete' article.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Удалить">
+    </form>
 {% endblock %}
